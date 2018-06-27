@@ -1,5 +1,12 @@
-<form action="">
-  <mat-form-field class="example-full-width">
-    <textarea matInput placeholder="Leave a comment"></textarea>
+<mat-card class="feed-insert-card" fxLayout="column">
+  <!-- <img class="avatar" src="https://www.petmd.com/sites/default/files/salmonella-infection-dogs.jpg" />-->
+  <mat-form-field>
+    <textarea cdkTextareaAutosize cdkAutosizeMaxRows="5" cdkAutosizeMinRows="5" matInput placeholder="What you are thinking?"></textarea>
   </mat-form-field>
-</form>
+  <mat-form-field>
+    <input matInput placeholder="Image link">
+  </mat-form-field>
+  <div fxLayoutAlign="end">
+    <button mat-button color="primary">Rock it!!</button>
+  </div>
+</mat-card>

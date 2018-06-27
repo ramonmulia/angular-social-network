@@ -7,7 +7,9 @@ import {
   MatCardModule,
   MatListModule,
   MatDividerModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatFormFieldControl,
+  MatInputModule
 } from '@angular/material';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -19,6 +21,7 @@ import { FeedItemComponent } from './feed-list/feed-item/feed-item.component';
 import { FriendListComponent } from './friend-list/friend-list.component';
 import { UserCardComponent } from './user-card/user-card.component';
 import { FeedInsertComponent } from './feed-insert/feed-insert.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ import { FeedInsertComponent } from './feed-insert/feed-insert.component';
     FeedItemComponent,
     FriendListComponent,
     UserCardComponent,
-    FeedInsertComponent
+    FeedInsertComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,7 @@ import { FeedInsertComponent } from './feed-insert/feed-insert.component';
     MatListModule,
     MatDividerModule,
     FlexLayoutModule,
-    MatFormFieldModule
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
