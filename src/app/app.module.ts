@@ -1,14 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatToolbarModule,
+  MatCardModule,
+  MatListModule,
+  MatDividerModule,
+  MatFormFieldModule
+} from '@angular/material';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FeedListComponent } from './feed-list/feed-list.component';
 import { FeedItemComponent } from './feed-list/feed-item/feed-item.component';
 import { FriendListComponent } from './friend-list/friend-list.component';
-import { FriendItemComponent } from './friend-list/friend-item/friend-item.component';
+import { UserCardComponent } from './user-card/user-card.component';
+import { FeedInsertComponent } from './feed-insert/feed-insert.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +27,20 @@ import { FriendItemComponent } from './friend-list/friend-item/friend-item.compo
     FeedListComponent,
     FeedItemComponent,
     FriendListComponent,
-    FriendItemComponent
+    UserCardComponent,
+    FeedInsertComponent
   ],
   imports: [
     BrowserModule,
     NoopAnimationsModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatListModule,
+    MatDividerModule,
+    FlexLayoutModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
