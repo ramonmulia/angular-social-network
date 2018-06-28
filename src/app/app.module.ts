@@ -23,7 +23,6 @@ import { HeaderComponent } from './header/header.component';
 import { FeedListComponent } from './feed-list/feed-list.component';
 import { FeedItemComponent } from './feed-list/feed-item/feed-item.component';
 import { FriendListComponent } from './friend-list/friend-list.component';
-import { UserCardComponent } from './user-card/user-card.component';
 import { FeedInsertComponent } from './feed-insert/feed-insert.component';
 import { HomeComponent } from './home/home.component';
 
@@ -46,7 +45,6 @@ export function getAuthServiceConfigs() {
     FeedListComponent,
     FeedItemComponent,
     FriendListComponent,
-    UserCardComponent,
     FeedInsertComponent,
     HomeComponent
   ],

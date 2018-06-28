@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import User from '../shared/user.model';
 
 @Component({
@@ -6,13 +6,9 @@ import User from '../shared/user.model';
   templateUrl: './friend-list.component.html',
   styleUrls: ['./friend-list.component.css']
 })
-export class FriendListComponent implements OnInit {
+export class FriendListComponent {
 
   constructor() { }
 
   @Input() friendList: User[];
-
-  ngOnInit() {
-    this.friendList = [...this.friendList, ...this.friendList];
-  }
 }
