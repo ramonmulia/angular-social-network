@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import Feed from '../shared/feed.model';
 
 @Component({
   selector: 'app-feed-list',
@@ -9,7 +10,10 @@ export class FeedListComponent implements OnInit {
 
   constructor() { }
 
+  @Input() feedList: Feed[];
+
   ngOnInit() {
+    console.log(this.feedList);
   }
 
 }

@@ -1,1 +1,2 @@
-<app-home></app-home>
+<app-home *ngIf="userLogged"></app-home>
+<button *ngIf="!userLogged" (click)="socialSignIn()">Sign in with Facebook</button>

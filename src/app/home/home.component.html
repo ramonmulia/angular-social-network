@@ -1,12 +1,19 @@
 <app-header></app-header>
 <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="end">
     <div fxLayout="column" style="margin: 0 auto;">
-        <app-feed-insert></app-feed-insert>
-        <div fxLayout.xs="column">
-            <app-feed-list></app-feed-list>
-        </div>
-    </div>
-    <div fxLayout.xs="column" [fxShow.xs]="false">
-        <app-friend-list></app-friend-list>
+        <app-feed-insert (newFeed)="newFeed($event)"></app-feed-insert>
+        <app-friend-list *ngIf="!feedListIsFetching; else loadingFriends" [friendList]="friendList"></app-friend-list>
+        <app-feed-list *ngIf="!feedListIsFetching; else loadingFeed" [feedList]="feedList"></app-feed-list>
     </div>
 </div>
+
+<ng-template #loadingFeed>
+    <mat-card class="feed-card">
+        <facebook-content-loader></facebook-content-loader>
+    </mat-card>
+</ng-template>
+<ng-template #loadingFriends>
+    <mat-card class="friend-load-card">
+        <bullet-list-content-loader></bullet-list-content-loader>
+    </mat-card>
+</ng-template>

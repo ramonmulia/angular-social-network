@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import User from '../shared/user.model';
 
 @Component({
   selector: 'app-friend-list',
@@ -9,7 +10,10 @@ export class FriendListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  @Input() friendList: User[];
 
+  ngOnInit() {
+    this.friendList = [...this.friendList, ...this.friendList];
+    console.log(this.friendList);
+  }
 }

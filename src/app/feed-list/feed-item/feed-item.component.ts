@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import Feed from '../../shared/feed.model';
+import User from '../../shared/user.model';
 
 @Component({
   selector: 'app-feed-item',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./feed-item.component.css']
 })
 export class FeedItemComponent implements OnInit {
-
   constructor() { }
 
-  ngOnInit() {
+  @Input() feed: Feed;
+
+  getUserImage(user: User) {
+    return {
+      backgroundImage: `url(${user.photo})`,
+      backgroundRepeat: 'round'
+    };
   }
 
+  ngOnInit() {
+    console.log(this.feed.user.photo);
+  }
 }

@@ -1,12 +1,20 @@
-<mat-card class="feed-insert-card" fxLayout="column">
-  <!-- <img class="avatar" src="https://www.petmd.com/sites/default/files/salmonella-infection-dogs.jpg" />-->
-  <mat-form-field>
-    <textarea cdkTextareaAutosize cdkAutosizeMaxRows="5" cdkAutosizeMinRows="5" matInput placeholder="What you are thinking?"></textarea>
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="Image link">
-  </mat-form-field>
-  <div fxLayoutAlign="end">
-    <button mat-button color="primary">Rock it!!</button>
-  </div>
-</mat-card>
+<form [formGroup]="feedForm" (ngSubmit)="onFormSubmit()">
+  <mat-card class="feed-card feed-insert-card" fxLayout="column">
+    <mat-form-field>
+      <textarea cdkTextareaAutosize cdkAutosizeMaxRows="5" cdkAutosizeMinRows="5" matInput placeholder="What are you thinking?"
+        formControlName="content"></textarea>
+      <mat-error *ngIf="feedForm.controls.content.invalid">
+        You must write what you're thinking!
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Image link" formControlName="imageLink">
+      <mat-error *ngIf="feedForm.controls.imageLink.invalid">You must insert a valid image url!</mat-error>
+    </mat-form-field>
+    <div fxLayoutAlign="end">
+      <button mat-button color="primary" [disabled]="isSubmitingFeed" type="submit">
+        {{!isSubmitingFeed ? 'Rock it!' : 'Sending...'}}
+      </button>
+    </div>
+  </mat-card>
+</form>

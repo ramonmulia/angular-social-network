@@ -6,10 +6,46 @@ body{
 }
 
 .avatar{
-    border: 1px solid black;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     vertical-align: middle;
     background-size: cover;
 }
+
+svg {
+    width: 100%;
+}
+
+.feed-card {
+    margin-bottom: 8px;
+    box-sizing: content-box !important;
+  }
+
+@media only screen and (min-width: 1200px) {
+    .feed-card {
+        width: 500px;
+    }
+}
+
+  .friend-load-card{
+    position: fixed !important;
+    right:50px;
+    height: 62px;
+    width: 200px;
+    box-sizing: content-box !important;
+  }
+
+  @media only screen and (max-width: 992px) {
+    .friend-load-card{
+        position: relative !important;
+        right:0;
+        height: 80px;
+        width: 90%;
+        margin-bottom: 8px;
+    }
+
+    .feed-card {
+        width: 300px;
+    }
+  }

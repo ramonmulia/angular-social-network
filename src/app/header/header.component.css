@@ -1,5 +1,7 @@
 .header-toolbar{
     justify-content: space-between;
+    position: fixed;
+    z-index: 1;
 }
 
 .header-toolbar-by{
