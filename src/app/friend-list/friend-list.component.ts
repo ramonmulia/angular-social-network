@@ -14,6 +14,5 @@ export class FriendListComponent implements OnInit {
 
   ngOnInit() {
     this.friendList = [...this.friendList, ...this.friendList];
-    console.log(this.friendList);
   }
 }

@@ -6,14 +6,9 @@ import Feed from '../shared/feed.model';
   templateUrl: './feed-list.component.html',
   styleUrls: ['./feed-list.component.css']
 })
-export class FeedListComponent implements OnInit {
+export class FeedListComponent{
 
   constructor() { }
 
   @Input() feedList: Feed[];
-
-  ngOnInit() {
-    console.log(this.feedList);
-  }
-
 }
