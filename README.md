@@ -12,7 +12,7 @@ Feed POST: /api/v1/feeds
 Friends GET: /api/v1/friends
 ```
 This project was built using [Angular 6](https://angular.io/) and [Material Angular](material.angular.io) Frameworks
-I created the hole project's structure using [Angular CLI](https://cli.angular.io/)
+I created the whole project's structure using [Angular CLI](https://cli.angular.io/)
 
 ### Installation
 
