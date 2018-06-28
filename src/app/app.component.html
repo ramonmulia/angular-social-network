@@ -1,2 +1,10 @@
 <app-home *ngIf="userLogged"></app-home>
-<button *ngIf="!userLogged" (click)="socialSignIn()">Sign in with Facebook</button>
+
+<div *ngIf="!userLogged" class="app-background">
+    <div class="app-login" fxLayout="column">
+        <p class="app-header">
+            Let's rock! - Social Network
+        </p>
+        <button mat-raised-button color="warn" (click)="socialSignIn()">Click to login! G+</button>
+    </div>
+</div>
