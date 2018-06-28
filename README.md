@@ -1,27 +1,30 @@
-# TotvsLabsChallenge
+# Totvs Labs Challenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+### Let's rock - Social Network
+I created a social Network to rockstars! Its a simple one you can see all your rockstars friends, the feeds of them and you can also send your status too.
 
-## Development server
+All data is fake! I'm using [Mock Api](www.mockapi.io) to get the datas and simulate a post.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Endpoints
+```sh
+Feed GET: /api/v1/feeds
+Feed POST: /api/v1/feeds
+Friends GET: /api/v1/friends
+```
+This project was built using [Angular 6](https://angular.io/) and [Material Angular](material.angular.io) Frameworks
+I created the hole project's structure using [Angular CLI](https://cli.angular.io/)
 
-## Code scaffolding
+### Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This project requires [Node.js](https://nodejs.org/) v8.11.0 to run.
 
-## Build
+Install the dependencies and devDependencies and start the server.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```sh
+$ cd totvs-labs-challenge
+$ npm i
+$ npm run dev
+```
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Deployed on Heroku
+[let's Rock! - Social Network](http://lets-rock-social-network.herokuapp.com/)
