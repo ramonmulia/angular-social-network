@@ -27,4 +27,4 @@ $ npm run dev
 ```
 
 ### Deployed on Heroku
-[let's Rock! - Social Network](http://lets-rock-social-network.herokuapp.com/)
+[let's Rock! - Social Network](https://lets-rock-social-network.herokuapp.com/)
