@@ -1,4 +1,4 @@
-# Totvs Labs Challenge
+# angular social network
 
 ### Let's rock - Social Network
 I created a social Network to rockstars! Its a simple one you can see all your rockstars friends, the feeds of them and you can also send your status too.
